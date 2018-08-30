@@ -1,3 +1,4 @@
+import com.sun.org.apache.xpath.internal.axes.ReverseAxesWalker;
 
 public class Main {
 
@@ -8,7 +9,10 @@ public class Main {
 		
 		
 		
-		System.out.println(nummersumma(1,4,5));
+		System.out.println(bakString("Daniel"));
+		
+		
+		
 	}
 	
 	public static int nummersumma(int... nummer){
@@ -17,7 +21,7 @@ public class Main {
 		
 		for(int x = 0; x<nummer.length; x++){
 			
-			res +=nummer[x];
+			res += nummer[x];
 		}
 		
 		
@@ -29,7 +33,18 @@ public class Main {
 		
 	}
 	
-	
+    public static String bakString(String sak){
+		
+    	if(sak.length() == 1){
+    		return sak;
+    	} 
+    		return bakString(sak.substring(1) + sak.charAt(0));
+
+    	
+    	
+    
+    	
+    }
 	
 	
 	
